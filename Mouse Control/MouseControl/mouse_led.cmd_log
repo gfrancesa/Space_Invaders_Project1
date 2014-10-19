@@ -1,0 +1,38 @@
+xst -intstyle ise -ifn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.xst" -ofn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan3.ucf -p xc3s200-ft256-4 "mouse_led.ngc" mouse_led.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o mouse_led_map.ncd mouse_led.ngd mouse_led.pcf 
+par -w -intstyle ise -ol high -t 1 mouse_led_map.ncd mouse_led.ncd mouse_led.pcf 
+xst -intstyle ise -ifn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.xst" -ofn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.syr" 
+xst -intstyle ise -ifn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.xst" -ofn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan3.ucf -p xc3s200-ft256-4 "mouse_led.ngc" mouse_led.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o mouse_led_map.ncd mouse_led.ngd mouse_led.pcf 
+par -w -intstyle ise -ol high -t 1 mouse_led_map.ncd mouse_led.ncd mouse_led.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mouse_led.twx mouse_led.ncd -o mouse_led.twr mouse_led.pcf -ucf spartan3.ucf 
+bitgen -intstyle ise -f mouse_led.ut mouse_led.ncd 
+xst -intstyle ise -ifn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.xst" -ofn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan3.ucf -p xc3s200-pq208-5 "mouse_led.ngc" mouse_led.ngd  
+map -intstyle ise -p xc3s200-pq208-5 -cm area -ir off -pr off -c 100 -o mouse_led_map.ncd mouse_led.ngd mouse_led.pcf 
+xst -intstyle ise -ifn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.xst" -ofn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 "mouse_led.ngc" mouse_led.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o mouse_led_map.ncd mouse_led.ngd mouse_led.pcf 
+par -w -intstyle ise -ol high -t 1 mouse_led_map.ncd mouse_led.ncd mouse_led.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml mouse_led.twx mouse_led.ncd -o mouse_led.twr mouse_led.pcf 
+bitgen -intstyle ise -f mouse_led.ut mouse_led.ncd 
+xst -intstyle ise -ifn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.xst" -ofn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.syr" 
+xst -intstyle ise -ifn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.xst" -ofn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan3.ucf -p xc3s200-ft256-5 "mouse_led.ngc" mouse_led.ngd  
+map -intstyle ise -p xc3s200-ft256-5 -cm area -ir off -pr off -c 100 -o mouse_led_map.ncd mouse_led.ngd mouse_led.pcf 
+par -w -intstyle ise -ol high -t 1 mouse_led_map.ncd mouse_led.ncd mouse_led.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml mouse_led.twx mouse_led.ncd -o mouse_led.twr mouse_led.pcf -ucf spartan3.ucf 
+bitgen -intstyle ise -f mouse_led.ut mouse_led.ncd 
+xst -intstyle ise -ifn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.xst" -ofn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.syr" 
+xst -intstyle ise -ifn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.xst" -ofn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.syr" 
+xst -intstyle ise -ifn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.xst" -ofn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.syr" 
+xst -intstyle ise -ifn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.xst" -ofn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.syr" 
+xst -intstyle ise -ifn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.xst" -ofn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.syr" 
+xst -intstyle ise -ifn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.xst" -ofn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.syr" 
+xst -intstyle ise -ifn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.xst" -ofn "C:/Users/Administrador/Desktop/Mouse Control/MouseControl/mouse_led.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan3.ucf -p xc3s200-ft256-5 "mouse_led.ngc" mouse_led.ngd  
+map -intstyle ise -p xc3s200-ft256-5 -cm area -ir off -pr off -c 100 -o mouse_led_map.ncd mouse_led.ngd mouse_led.pcf 
+par -w -intstyle ise -ol high -t 1 mouse_led_map.ncd mouse_led.ncd mouse_led.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml mouse_led.twx mouse_led.ncd -o mouse_led.twr mouse_led.pcf -ucf spartan3.ucf 

@@ -1,0 +1,5 @@
+MO ps2_rx NULL list_ch09_01_ps2_rx.v vlg56/ps2__rx.bin 1413054483
+MO ps2_tx NULL list_ch10_01_ps2_tx.v vlg60/ps2__tx.bin 1413054483
+MO ps2_rxtx NULL list_ch10_02_ps2_rxtx.v vlg22/ps2__rxtx.bin 1413054483
+MO mouse NULL list_ch10_04_mouse.v vlg61/mouse.bin 1413054483
+MO mouse_led NULL list_ch10_05_mouse_led.v vlg1D/mouse__led.bin 1413054483

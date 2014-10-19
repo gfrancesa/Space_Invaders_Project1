@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Administrador\Desktop\Mouse Control\MouseControl\mouse_led.ncd
+OUTFILE=C:\Users\Administrador\Desktop\Mouse Control\MouseControl\mouse_led.bit
+FAMILY=Spartan3
+PART=xc3s200-5ft256
+WORKINGDIR=C:\Users\Administrador\Desktop\Mouse Control\MouseControl
+LICENSE=WebPack
+USER_INFO=210858245_0_0_555

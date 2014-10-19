@@ -1,0 +1,5 @@
+verilog work "list_ch10_01_ps2_tx.v"
+verilog work "list_ch09_01_ps2_rx.v"
+verilog work "list_ch10_02_ps2_rxtx.v"
+verilog work "list_ch10_04_mouse.v"
+verilog work "list_ch10_05_mouse_led.v"
