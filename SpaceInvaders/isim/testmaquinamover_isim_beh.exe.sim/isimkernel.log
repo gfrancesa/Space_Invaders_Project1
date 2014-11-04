@@ -1,0 +1,29 @@
+Command line:
+   testmaquinamover_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  52804
+
+Tue Nov 04 01:09:06 2014
+
+
+ Elaboration Time: 0.249603 sec
+
+ Current Memory Usage: 682.058 Meg
+
+ Total Signals          : 17
+ Total Nets             : 27
+ Total Signal Drivers   : 9
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 17
+ Total Traceable Variables  : 34
+ Total Scalar Nets and Variables : 162
+Total Line Count : 91
+
+ Total Simulation Time: 0.452403 sec
+
+ Current Memory Usage: 996.631 Meg
+
+Tue Nov 04 01:09:50 2014
+

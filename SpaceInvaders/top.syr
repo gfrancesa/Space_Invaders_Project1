@@ -1,0 +1,1206 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\ps2_tx.v" into library work
+Parsing module <ps2_tx>.
+Analyzing Verilog file "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\ps2_rx.v" into library work
+Parsing module <ps2_rx>.
+Analyzing Verilog file "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\ps2_rxtx.v" into library work
+Parsing module <ps2_rxtx>.
+Analyzing Verilog file "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\timer_1ms.v" into library work
+Parsing module <timer_1ms>.
+Analyzing Verilog file "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\mouse.v" into library work
+Parsing module <mouse>.
+Analyzing Verilog file "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Figures_ROM.v" into library work
+Parsing module <Figures_ROM>.
+Analyzing Verilog file "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\clk_pixel.v" into library work
+Parsing module <clk_pixel>.
+Analyzing Verilog file "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\vga_sync.v" into library work
+Parsing module <vga_sync>.
+Analyzing Verilog file "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\mouse_led.v" into library work
+Parsing module <mouse_led>.
+Analyzing Verilog file "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" into library work
+Parsing module <Machine>.
+Analyzing Verilog file "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\graphic.v" into library work
+Parsing module <graphic>.
+Analyzing Verilog file "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\debounce.v" into library work
+Parsing module <debounce>.
+Analyzing Verilog file "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Cmilis.v" into library work
+Parsing module <Cmilis>.
+Analyzing Verilog file "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\top.v" into library work
+Parsing module <top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <top>.
+
+Elaborating module <vga_sync>.
+
+Elaborating module <clk_pixel>.
+
+Elaborating module <debounce>.
+
+Elaborating module <timer_1ms>.
+
+Elaborating module <graphic>.
+WARNING:HDLCompiler:872 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\graphic.v" Line 42: Using initial value of ENEMIGOS_FILA_1_Y since it is never assigned
+WARNING:HDLCompiler:872 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\graphic.v" Line 43: Using initial value of ENEMIGOS_FILA_2_X since it is never assigned
+WARNING:HDLCompiler:872 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\graphic.v" Line 44: Using initial value of ENEMIGOS_FILA_2_Y since it is never assigned
+WARNING:HDLCompiler:872 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\graphic.v" Line 45: Using initial value of ENEMIGOS_FILA_3_X since it is never assigned
+WARNING:HDLCompiler:872 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\graphic.v" Line 46: Using initial value of ENEMIGOS_FILA_3_Y since it is never assigned
+WARNING:HDLCompiler:872 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\graphic.v" Line 47: Using initial value of LARGO_FILA since it is never assigned
+WARNING:HDLCompiler:872 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\graphic.v" Line 48: Using initial value of DIVISOR_FILAS since it is never assigned
+WARNING:HDLCompiler:872 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\graphic.v" Line 51: Using initial value of BARRERA_1_X since it is never assigned
+WARNING:HDLCompiler:872 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\graphic.v" Line 52: Using initial value of BARRERA_1_Y since it is never assigned
+WARNING:HDLCompiler:872 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\graphic.v" Line 53: Using initial value of BARRERA_2_X since it is never assigned
+WARNING:HDLCompiler:872 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\graphic.v" Line 54: Using initial value of BARRERA_2_Y since it is never assigned
+WARNING:HDLCompiler:872 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\graphic.v" Line 55: Using initial value of BARRERA_3_X since it is never assigned
+WARNING:HDLCompiler:872 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\graphic.v" Line 56: Using initial value of BARRERA_3_Y since it is never assigned
+WARNING:HDLCompiler:872 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\graphic.v" Line 61: Using initial value of JUGADOR_Y since it is never assigned
+WARNING:HDLCompiler:872 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\graphic.v" Line 133: Using initial value of loose_flag since it is never assigned
+
+Elaborating module <Figures_ROM>.
+
+Elaborating module <Cmilis>.
+
+Elaborating module <Machine>.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 53: Signal <vez> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 55: Signal <vez> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 57: Signal <vez> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 62: Signal <movidas> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 67: Signal <movidas> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 72: Signal <movidas> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 92: Signal <movidas> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 93: Signal <vez> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 94: Signal <posx> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 97: Signal <movidas> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 98: Signal <vez> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 99: Signal <posx> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 103: Signal <movidas> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 104: Signal <vez> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 105: Signal <posx> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 108: Signal <movidas> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 109: Signal <vez> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 110: Signal <posx> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 114: Signal <movidas> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 115: Signal <vez> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 116: Signal <posx> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 120: Signal <movidas> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 121: Signal <vez> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 122: Signal <posx> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 126: Signal <movidas> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 127: Signal <vez> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 128: Signal <posx> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 132: Signal <movidas> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 133: Signal <vez> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v" Line 134: Signal <posx> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+Elaborating module <mouse_led>.
+
+Elaborating module <mouse>.
+
+Elaborating module <ps2_rxtx>.
+
+Elaborating module <ps2_rx>.
+WARNING:HDLCompiler:413 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\ps2_rx.v" Line 88: Result of 32-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <ps2_tx>.
+WARNING:HDLCompiler:413 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\ps2_tx.v" Line 105: Result of 32-bit expression is truncated to fit in 13-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\ps2_tx.v" Line 129: Result of 32-bit expression is truncated to fit in 4-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top>.
+    Related source file is "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\top.v".
+    Summary:
+	no macro.
+Unit <top> synthesized.
+
+Synthesizing Unit <vga_sync>.
+    Related source file is "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\vga_sync.v".
+    Found 11-bit register for signal <cnt_y>.
+    Found 1-bit register for signal <in_hs>.
+    Found 1-bit register for signal <in_vs>.
+    Found 11-bit register for signal <cnt_x>.
+    Found 11-bit subtractor for signal <x> created at line 65.
+    Found 11-bit subtractor for signal <y> created at line 66.
+    Found 11-bit adder for signal <cnt_y[10]_GND_2_o_add_3_OUT> created at line 44.
+    Found 11-bit adder for signal <cnt_x[10]_GND_2_o_add_5_OUT> created at line 50.
+    Found 11-bit comparator greater for signal <cnt_x[10]_GND_2_o_LessThan_12_o> created at line 56
+    Found 11-bit comparator greater for signal <cnt_y[10]_GND_2_o_LessThan_13_o> created at line 57
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  24 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <vga_sync> synthesized.
+
+Synthesizing Unit <clk_pixel>.
+    Related source file is "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\clk_pixel.v".
+    Found 1-bit register for signal <clk_pixel>.
+    Found 1-bit register for signal <cnt>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <clk_pixel> synthesized.
+
+Synthesizing Unit <debounce>.
+    Related source file is "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\debounce.v".
+    Found 4-bit register for signal <cnt>.
+    Found 1-bit register for signal <click>.
+    Found 4-bit adder for signal <cnt[3]_GND_4_o_add_3_OUT> created at line 24.
+    Found 4-bit comparator greater for signal <cnt[3]_PWR_5_o_LessThan_3_o> created at line 23
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   5 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <debounce> synthesized.
+
+Synthesizing Unit <timer_1ms>.
+    Related source file is "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\timer_1ms.v".
+    Found 1-bit register for signal <clk_1ms>.
+    Found 16-bit register for signal <cnt>.
+    Found 16-bit adder for signal <cnt[15]_GND_5_o_add_2_OUT> created at line 21.
+    Found 16-bit comparator greater for signal <n0000> created at line 17
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  17 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <timer_1ms> synthesized.
+
+Synthesizing Unit <graphic>.
+    Related source file is "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\graphic.v".
+WARNING:Xst:647 - Input <btn1<1:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <btn2<1:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit register for signal <rgb_now>.
+    Found 11-bit register for signal <rom_addr>.
+    Found 11-bit register for signal <JUGADOR_X>.
+    Found 11-bit subtractor for signal <JUGADOR_X[10]_GND_6_o_sub_5_OUT> created at line 184.
+    Found 11-bit adder for signal <JUGADOR_X[10]_GND_6_o_add_7_OUT> created at line 187.
+    Found 11-bit adder for signal <ENEMIGOS_FILA_1_X[10]_GND_6_o_add_43_OUT> created at line 470.
+    Found 7-bit adder for signal <n0188[6:0]> created at line 493.
+    Found 8-bit adder for signal <n0190[7:0]> created at line 512.
+    Found 11-bit adder for signal <JUGADOR_X[10]_GND_6_o_add_79_OUT> created at line 527.
+    Found 5-bit subtractor for signal <x[10]_ENEMIGOS_FILA_1_X[10]_sub_49_OUT<4:0>> created at line 476.
+    Found 1-bit 32-to-1 multiplexer for signal <x[10]_font_word[31]_Mux_49_o> created at line 476.
+    Found 1-bit 32-to-1 multiplexer for signal <x[10]_font_word[31]_Mux_61_o> created at line 494.
+    Found 11-bit comparator greater for signal <GND_6_o_JUGADOR_X[10]_LessThan_4_o> created at line 183
+    Found 11-bit comparator greater for signal <JUGADOR_X[10]_GND_6_o_LessThan_7_o> created at line 186
+    Found 11-bit comparator greater for signal <x[10]_GND_6_o_LessThan_11_o> created at line 257
+    Found 11-bit comparator greater for signal <y[10]_GND_6_o_LessThan_12_o> created at line 257
+    Found 11-bit comparator lessequal for signal <n0015> created at line 418
+    Found 11-bit comparator lessequal for signal <n0017> created at line 418
+    Found 11-bit comparator lessequal for signal <n0020> created at line 419
+    Found 11-bit comparator lessequal for signal <n0024> created at line 423
+    Found 11-bit comparator lessequal for signal <n0026> created at line 423
+    Found 11-bit comparator lessequal for signal <n0029> created at line 424
+    Found 11-bit comparator lessequal for signal <n0031> created at line 424
+    Found 11-bit comparator lessequal for signal <n0037> created at line 432
+    Found 11-bit comparator lessequal for signal <n0039> created at line 432
+    Found 11-bit comparator lessequal for signal <n0043> created at line 437
+    Found 11-bit comparator lessequal for signal <n0045> created at line 437
+    Found 11-bit comparator lessequal for signal <n0051> created at line 447
+    Found 11-bit comparator lessequal for signal <n0053> created at line 447
+    Found 11-bit comparator lessequal for signal <n0057> created at line 452
+    Found 11-bit comparator lessequal for signal <n0059> created at line 452
+    Found 11-bit comparator lessequal for signal <n0065> created at line 470
+    Found 11-bit comparator lessequal for signal <n0068> created at line 470
+    Found 11-bit comparator lessequal for signal <n0071> created at line 471
+    Found 11-bit comparator lessequal for signal <n0073> created at line 471
+    Found 11-bit comparator lessequal for signal <n0084> created at line 488
+    Found 11-bit comparator lessequal for signal <n0086> created at line 488
+    Found 11-bit comparator lessequal for signal <n0089> created at line 489
+    Found 11-bit comparator lessequal for signal <n0091> created at line 489
+    Found 11-bit comparator lessequal for signal <n0103> created at line 508
+    Found 11-bit comparator lessequal for signal <n0105> created at line 508
+    Found 11-bit comparator lessequal for signal <n0113> created at line 527
+    Found 11-bit comparator lessequal for signal <n0116> created at line 527
+    Found 11-bit comparator lessequal for signal <n0119> created at line 528
+    Found 11-bit comparator lessequal for signal <n0121> created at line 528
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred  30 D-type flip-flop(s).
+	inferred  33 Comparator(s).
+	inferred  10 Multiplexer(s).
+Unit <graphic> synthesized.
+
+Synthesizing Unit <Figures_ROM>.
+    Related source file is "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Figures_ROM.v".
+    Found 11-bit register for signal <addr_reg>.
+    Found 16x1-bit Read Only RAM for signal <_n33449>
+    Found 512x16-bit Read Only RAM for signal <_n33973>
+WARNING:Xst:737 - Found 1-bit latch for signal <data<31>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<30>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<29>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<28>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<27>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<26>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<25>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<24>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<23>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<22>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<21>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<20>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<19>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   2 RAM(s).
+	inferred  11 D-type flip-flop(s).
+	inferred  32 Latch(s).
+	inferred  17 Multiplexer(s).
+Unit <Figures_ROM> synthesized.
+
+Synthesizing Unit <Cmilis>.
+    Related source file is "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Cmilis.v".
+    Found 27-bit register for signal <count>.
+    Found 27-bit adder for signal <count[26]_GND_40_o_add_1_OUT> created at line 31.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  27 D-type flip-flop(s).
+Unit <Cmilis> synthesized.
+
+Synthesizing Unit <Machine>.
+    Related source file is "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\Machine.v".
+        T0 = 3'b000
+        T1 = 3'b001
+        T2 = 3'b010
+        T3 = 3'b011
+        T4 = 3'b100
+        T5 = 3'b101
+        T6 = 3'b110
+        T7 = 3'b111
+    Found 3-bit register for signal <PRE>.
+    Found 11-bit subtractor for signal <posx[10]_GND_41_o_sub_18_OUT> created at line 110.
+WARNING:Xst:737 - Found 1-bit latch for signal <posx<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <posx<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <posx<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <posx<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <posx<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <posx<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <posx<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <posx<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <posx<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <posx<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <posx<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  11 Latch(s).
+Unit <Machine> synthesized.
+
+Synthesizing Unit <mouse_led>.
+    Related source file is "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\mouse_led.v".
+    Found 10-bit register for signal <p_reg>.
+    Found 10-bit adder for signal <p_reg[9]_xm[8]_add_1_OUT> created at line 38.
+    Found 8x8-bit Read Only RAM for signal <led>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  10 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <mouse_led> synthesized.
+
+Synthesizing Unit <mouse>.
+    Related source file is "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\mouse.v".
+    Found 9-bit register for signal <x_reg>.
+    Found 3-bit register for signal <btn_reg>.
+    Found 3-bit register for signal <state_reg>.
+    Found finite state machine <FSM_1> for signal <state_reg>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 12                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred  12 D-type flip-flop(s).
+	inferred  10 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <mouse> synthesized.
+
+Synthesizing Unit <ps2_rxtx>.
+    Related source file is "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\ps2_rxtx.v".
+    Summary:
+	no macro.
+Unit <ps2_rxtx> synthesized.
+
+Synthesizing Unit <ps2_rx>.
+    Related source file is "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\ps2_rx.v".
+    Found 2-bit register for signal <state_reg>.
+    Found 4-bit register for signal <n_reg>.
+    Found 11-bit register for signal <b_reg>.
+    Found 8-bit register for signal <filter_reg>.
+    Found 1-bit register for signal <f_ps2c_reg>.
+    Found finite state machine <FSM_2> for signal <state_reg>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit subtractor for signal <GND_67_o_GND_67_o_sub_12_OUT<3:0>> created at line 88.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  24 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <ps2_rx> synthesized.
+
+Synthesizing Unit <ps2_tx>.
+    Related source file is "C:\Users\Johan\Documents\TEC\Taller\SpaceInvaders\ps2_tx.v".
+    Found 3-bit register for signal <state_reg>.
+    Found 13-bit register for signal <c_reg>.
+    Found 4-bit register for signal <n_reg>.
+    Found 9-bit register for signal <b_reg>.
+    Found 8-bit register for signal <filter_reg>.
+    Found 1-bit register for signal <f_ps2c_reg>.
+    Found finite state machine <FSM_3> for signal <state_reg>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 14                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 7                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 13-bit subtractor for signal <GND_68_o_GND_68_o_sub_13_OUT<12:0>> created at line 105.
+    Found 4-bit subtractor for signal <GND_68_o_GND_68_o_sub_19_OUT<3:0>> created at line 129.
+    Found 1-bit tristate buffer for signal <ps2c> created at line 142
+    Found 1-bit tristate buffer for signal <ps2d> created at line 143
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  35 D-type flip-flop(s).
+	inferred   9 Multiplexer(s).
+	inferred   2 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <ps2_tx> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 16x1-bit single-port Read Only RAM                    : 1
+ 512x16-bit single-port Read Only RAM                  : 1
+ 8x8-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 26
+ 10-bit adder                                          : 1
+ 11-bit adder                                          : 4
+ 11-bit addsub                                         : 1
+ 11-bit subtractor                                     : 3
+ 13-bit subtractor                                     : 1
+ 16-bit adder                                          : 5
+ 27-bit adder                                          : 1
+ 4-bit adder                                           : 5
+ 4-bit subtractor                                      : 2
+ 5-bit subtractor                                      : 1
+ 7-bit adder                                           : 1
+ 8-bit adder                                           : 1
+# Registers                                            : 43
+ 1-bit register                                        : 16
+ 10-bit register                                       : 1
+ 11-bit register                                       : 6
+ 13-bit register                                       : 1
+ 16-bit register                                       : 5
+ 27-bit register                                       : 1
+ 3-bit register                                        : 1
+ 4-bit register                                        : 7
+ 8-bit register                                        : 3
+ 9-bit register                                        : 2
+# Latches                                              : 43
+ 1-bit latch                                           : 43
+# Comparators                                          : 45
+ 11-bit comparator greater                             : 6
+ 11-bit comparator lessequal                           : 29
+ 16-bit comparator greater                             : 5
+ 4-bit comparator greater                              : 5
+# Multiplexers                                         : 51
+ 1-bit 2-to-1 multiplexer                              : 34
+ 1-bit 32-to-1 multiplexer                             : 2
+ 10-bit 2-to-1 multiplexer                             : 2
+ 11-bit 2-to-1 multiplexer                             : 2
+ 13-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 6
+ 9-bit 2-to-1 multiplexer                              : 2
+# Tristates                                            : 2
+ 1-bit tristate buffer                                 : 2
+# FSMs                                                 : 3
+# Xors                                                 : 1
+ 1-bit xor8                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <b1> is unconnected in block <top>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <b3> is unconnected in block <top>.
+   It will be removed from the design.
+WARNING:Xst:1293 - FF/Latch <posx_9> has a constant value of 0 in block <mueve>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <posx_10> has a constant value of 0 in block <mueve>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <posx_6> has a constant value of 0 in block <mueve>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <posx_8> has a constant value of 0 in block <mueve>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <posx_7> has a constant value of 1 in block <mueve>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <posx_3> has a constant value of 0 in block <mueve>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <posx_5> has a constant value of 0 in block <mueve>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <posx_4> has a constant value of 0 in block <mueve>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <posx_0> has a constant value of 0 in block <mueve>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <posx_2> has a constant value of 0 in block <mueve>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <posx_1> has a constant value of 0 in block <mueve>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <b_reg_0> of sequential type is unconnected in block <ps2_rx_unit>.
+WARNING:Xst:2677 - Node <btn_reg_2> of sequential type is unconnected in block <mouse_unit>.
+WARNING:Xst:2973 - All outputs of instance <b1> of block <debounce> are unconnected in block <top>. Underlying logic will be removed.
+WARNING:Xst:2973 - All outputs of instance <b3> of block <debounce> are unconnected in block <top>. Underlying logic will be removed.
+
+Synthesizing (advanced) Unit <Cmilis>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <Cmilis> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Figures_ROM>.
+INFO:Xst:3226 - The RAM <Mram__n33973> will be implemented as a BLOCK RAM, absorbing the following register(s): <addr_reg>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 16-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <addr<8:0>>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram__n33449> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 1-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <addr_reg<3:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <Figures_ROM> synthesized (advanced).
+
+Synthesizing (advanced) Unit <debounce>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <debounce> synthesized (advanced).
+
+Synthesizing (advanced) Unit <graphic>.
+The following registers are absorbed into counter <JUGADOR_X>: 1 register on signal <JUGADOR_X>.
+Unit <graphic> synthesized (advanced).
+
+Synthesizing (advanced) Unit <mouse_led>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_led> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <p_reg<9:7>>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <led>           |          |
+    -----------------------------------------------------------------------
+Unit <mouse_led> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ps2_rx>.
+The following registers are absorbed into counter <n_reg>: 1 register on signal <n_reg>.
+Unit <ps2_rx> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ps2_tx>.
+The following registers are absorbed into counter <n_reg>: 1 register on signal <n_reg>.
+The following registers are absorbed into counter <c_reg>: 1 register on signal <c_reg>.
+Unit <ps2_tx> synthesized (advanced).
+
+Synthesizing (advanced) Unit <timer_1ms>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <timer_1ms> synthesized (advanced).
+
+Synthesizing (advanced) Unit <vga_sync>.
+The following registers are absorbed into counter <cnt_x>: 1 register on signal <cnt_x>.
+The following registers are absorbed into counter <cnt_y>: 1 register on signal <cnt_y>.
+Unit <vga_sync> synthesized (advanced).
+WARNING:Xst:2677 - Node <b_reg_0> of sequential type is unconnected in block <ps2_rx>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 16x1-bit single-port distributed Read Only RAM        : 1
+ 512x16-bit single-port block Read Only RAM            : 1
+ 8x8-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 9
+ 10-bit adder                                          : 1
+ 11-bit adder                                          : 2
+ 11-bit subtractor                                     : 3
+ 5-bit subtractor                                      : 1
+ 7-bit adder                                           : 1
+ 8-bit adder                                           : 1
+# Counters                                             : 13
+ 11-bit up counter                                     : 2
+ 11-bit updown counter                                 : 1
+ 13-bit down counter                                   : 1
+ 16-bit up counter                                     : 3
+ 27-bit up counter                                     : 1
+ 4-bit down counter                                    : 2
+ 4-bit up counter                                      : 3
+# Registers                                            : 99
+ Flip-Flops                                            : 99
+# Comparators                                          : 41
+ 11-bit comparator greater                             : 6
+ 11-bit comparator lessequal                           : 29
+ 16-bit comparator greater                             : 3
+ 4-bit comparator greater                              : 3
+# Multiplexers                                         : 47
+ 1-bit 2-to-1 multiplexer                              : 33
+ 1-bit 32-to-1 multiplexer                             : 2
+ 10-bit 2-to-1 multiplexer                             : 2
+ 11-bit 2-to-1 multiplexer                             : 2
+ 8-bit 2-to-1 multiplexer                              : 6
+ 9-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 3
+# Xors                                                 : 1
+ 1-bit xor8                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <posx_9> has a constant value of 0 in block <Machine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <posx_10> has a constant value of 0 in block <Machine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <posx_6> has a constant value of 0 in block <Machine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <posx_8> has a constant value of 0 in block <Machine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <posx_7> has a constant value of 1 in block <Machine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <posx_3> has a constant value of 0 in block <Machine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <posx_5> has a constant value of 0 in block <Machine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <posx_4> has a constant value of 0 in block <Machine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <posx_0> has a constant value of 0 in block <Machine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <posx_2> has a constant value of 0 in block <Machine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <posx_1> has a constant value of 0 in block <Machine>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <mouse/mouse_unit/FSM_1> on signal <state_reg[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 011
+ 100   | 100
+ 101   | 101
+ 110   | 110
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <mouse/mouse_unit/ps2_unit/ps2_rx_unit/FSM_2> on signal <state_reg[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 11
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <mouse/mouse_unit/ps2_unit/ps2_tx_unit/FSM_3> on signal <state_reg[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 011
+ 100   | 100
+-------------------
+WARNING:Xst:1710 - FF/Latch <b_reg_8> (without init value) has a constant value of 0 in block <ps2_tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <g0/rom_addr_7> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <g0/rom_addr_8> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <g0/rom_addr_9> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <g0/rom_addr_10> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <g0/rgb_now_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <g0/rgb_now_5> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <g0/rgb_now_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <g0/rgb_now_6> 
+WARNING:Xst:2677 - Node <mouse/mouse_unit/btn_reg_2> of sequential type is unconnected in block <top>.
+INFO:Xst:2261 - The FF/Latch <g0/rgb_now_0> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <g0/rgb_now_2> <g0/rgb_now_4> <g0/rgb_now_7> 
+
+Optimizing unit <top> ...
+
+Optimizing unit <Figures_ROM> ...
+
+Optimizing unit <ps2_rx> ...
+WARNING:Xst:1710 - FF/Latch <g0/font_unit/addr_reg_10> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <g0/font_unit/addr_reg_9> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <g0/font_unit/addr_reg_8> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <g0/font_unit/addr_reg_7> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_8> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_9> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_11> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_20> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_10> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_22> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_23> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_21> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_5> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_6> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_4> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_24> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_25> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_7> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_27> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_26> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_1> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_2> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_0> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_12> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_13> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_3> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_15> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_16> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_14> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_17> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_18> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_19> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_28> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_30> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_31> is equivalent to a wire in block <top>.
+WARNING:Xst:1294 - Latch <g0/font_unit/data_29> is equivalent to a wire in block <top>.
+WARNING:Xst:1293 - FF/Latch <g0/JUGADOR_X_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rapides/count_26> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rapides/count_25> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rapides/count_24> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rapides/count_23> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rapides/count_22> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rapides/count_21> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rapides/count_20> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rapides/count_19> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rapides/count_18> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rapides/count_17> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rapides/count_16> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rapides/count_15> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rapides/count_14> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rapides/count_13> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rapides/count_12> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rapides/count_11> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rapides/count_10> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rapides/count_9> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rapides/count_8> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rapides/count_7> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rapides/count_6> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rapides/count_5> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <mouse/mouse_unit/ps2_unit/ps2_tx_unit/f_ps2c_reg> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <mouse/mouse_unit/ps2_unit/ps2_rx_unit/f_ps2c_reg> 
+INFO:Xst:2261 - The FF/Latch <mouse/mouse_unit/ps2_unit/ps2_tx_unit/filter_reg_0> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <mouse/mouse_unit/ps2_unit/ps2_rx_unit/filter_reg_0> 
+INFO:Xst:2261 - The FF/Latch <mouse/mouse_unit/ps2_unit/ps2_tx_unit/filter_reg_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <mouse/mouse_unit/ps2_unit/ps2_rx_unit/filter_reg_1> 
+INFO:Xst:2261 - The FF/Latch <mouse/mouse_unit/ps2_unit/ps2_tx_unit/filter_reg_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <mouse/mouse_unit/ps2_unit/ps2_rx_unit/filter_reg_2> 
+INFO:Xst:2261 - The FF/Latch <mouse/mouse_unit/ps2_unit/ps2_tx_unit/filter_reg_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <mouse/mouse_unit/ps2_unit/ps2_rx_unit/filter_reg_3> 
+INFO:Xst:2261 - The FF/Latch <mouse/mouse_unit/ps2_unit/ps2_tx_unit/filter_reg_4> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <mouse/mouse_unit/ps2_unit/ps2_rx_unit/filter_reg_4> 
+INFO:Xst:2261 - The FF/Latch <mouse/mouse_unit/ps2_unit/ps2_tx_unit/filter_reg_5> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <mouse/mouse_unit/ps2_unit/ps2_rx_unit/filter_reg_5> 
+INFO:Xst:2261 - The FF/Latch <mouse/mouse_unit/ps2_unit/ps2_tx_unit/filter_reg_6> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <mouse/mouse_unit/ps2_unit/ps2_rx_unit/filter_reg_6> 
+INFO:Xst:2261 - The FF/Latch <mouse/mouse_unit/ps2_unit/ps2_tx_unit/filter_reg_7> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <mouse/mouse_unit/ps2_unit/ps2_rx_unit/filter_reg_7> 
+INFO:Xst:2261 - The FF/Latch <b0/m0/cnt_10> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <b2/m0/cnt_10> <b4/m0/cnt_10> 
+INFO:Xst:2261 - The FF/Latch <b0/m0/cnt_11> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <b2/m0/cnt_11> <b4/m0/cnt_11> 
+INFO:Xst:2261 - The FF/Latch <b0/m0/cnt_12> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <b2/m0/cnt_12> <b4/m0/cnt_12> 
+INFO:Xst:2261 - The FF/Latch <b0/m0/cnt_13> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <b2/m0/cnt_13> <b4/m0/cnt_13> 
+INFO:Xst:2261 - The FF/Latch <b0/m0/cnt_14> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <b2/m0/cnt_14> <b4/m0/cnt_14> 
+INFO:Xst:2261 - The FF/Latch <b0/m0/cnt_15> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <b2/m0/cnt_15> <b4/m0/cnt_15> 
+INFO:Xst:2261 - The FF/Latch <b0/m0/cnt_0> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <b2/m0/cnt_0> <b4/m0/cnt_0> 
+INFO:Xst:2261 - The FF/Latch <b0/m0/cnt_1> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <b2/m0/cnt_1> <b4/m0/cnt_1> 
+INFO:Xst:2261 - The FF/Latch <b0/m0/cnt_2> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <b2/m0/cnt_2> <b4/m0/cnt_2> 
+INFO:Xst:2261 - The FF/Latch <b0/m0/cnt_3> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <b2/m0/cnt_3> <b4/m0/cnt_3> 
+INFO:Xst:2261 - The FF/Latch <b0/m0/cnt_4> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <b2/m0/cnt_4> <b4/m0/cnt_4> 
+INFO:Xst:2261 - The FF/Latch <b0/m0/cnt_5> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <b2/m0/cnt_5> <b4/m0/cnt_5> 
+INFO:Xst:2261 - The FF/Latch <b0/m0/cnt_6> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <b2/m0/cnt_6> <b4/m0/cnt_6> 
+INFO:Xst:2261 - The FF/Latch <b0/m0/cnt_7> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <b2/m0/cnt_7> <b4/m0/cnt_7> 
+INFO:Xst:2261 - The FF/Latch <b0/m0/cnt_8> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <b2/m0/cnt_8> <b4/m0/cnt_8> 
+INFO:Xst:2261 - The FF/Latch <b0/m0/cnt_9> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <b2/m0/cnt_9> <b4/m0/cnt_9> 
+INFO:Xst:2261 - The FF/Latch <b0/m0/clk_1ms> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <b2/m0/clk_1ms> <b4/m0/clk_1ms> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 5.
+FlipFlop g0/font_unit/addr_reg_0 has been replicated 2 time(s)
+FlipFlop g0/font_unit/addr_reg_1 has been replicated 3 time(s)
+FlipFlop g0/font_unit/addr_reg_2 has been replicated 2 time(s)
+FlipFlop g0/font_unit/addr_reg_3 has been replicated 3 time(s)
+FlipFlop g0/font_unit/addr_reg_4 has been replicated 4 time(s)
+FlipFlop g0/font_unit/addr_reg_5 has been replicated 3 time(s)
+FlipFlop g0/font_unit/addr_reg_6 has been replicated 3 time(s)
+FlipFlop g0/rgb_now_3 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 187
+ Flip-Flops                                            : 187
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 551
+#      GND                         : 1
+#      INV                         : 20
+#      LUT1                        : 39
+#      LUT2                        : 63
+#      LUT3                        : 51
+#      LUT4                        : 64
+#      LUT5                        : 39
+#      LUT6                        : 103
+#      MUXCY                       : 81
+#      MUXF7                       : 13
+#      VCC                         : 1
+#      XORCY                       : 76
+# FlipFlops/Latches                : 187
+#      FD                          : 46
+#      FDC                         : 17
+#      FDCE                        : 60
+#      FDE                         : 17
+#      FDR                         : 30
+#      FDRE                        : 17
+# RAMS                             : 1
+#      RAMB8BWER                   : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 24
+#      IBUF                        : 3
+#      IOBUF                       : 2
+#      OBUF                        : 19
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             185  out of  18224     1%  
+ Number of Slice LUTs:                  379  out of   9112     4%  
+    Number used as Logic:               379  out of   9112     4%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    412
+   Number with an unused Flip Flop:     227  out of    412    55%  
+   Number with an unused LUT:            33  out of    412     8%  
+   Number of fully used LUT-FF pairs:   152  out of    412    36%  
+   Number of unique control sets:        21
+
+IO Utilization: 
+ Number of IOs:                          27
+ Number of bonded IOBs:                  25  out of    232    10%  
+    IOB Flip Flops/Latches:               2
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+vga0/clk0/clk_pixel                | BUFG                   | 24    |
+clk                                | BUFGP                  | 149   |
+b0/m0/clk_1ms                      | NONE(b4/cnt_0)         | 15    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 6.018ns (Maximum Frequency: 166.157MHz)
+   Minimum input arrival time before clock: 3.151ns
+   Maximum output required time after clock: 5.322ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'vga0/clk0/clk_pixel'
+  Clock period: 5.490ns (frequency: 182.148MHz)
+  Total number of paths / destination ports: 643 / 35
+-------------------------------------------------------------------------
+Delay:               5.490ns (Levels of Logic = 5)
+  Source:            vga0/cnt_x_6 (FF)
+  Destination:       vga0/cnt_y_0 (FF)
+  Source Clock:      vga0/clk0/clk_pixel rising
+  Destination Clock: vga0/clk0/clk_pixel rising
+
+  Data Path: vga0/cnt_x_6 to vga0/cnt_y_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             17   0.447   1.256  vga0/cnt_x_6 (vga0/cnt_x_6)
+     LUT6:I3->O            2   0.205   0.617  vga0/_n00381_SW0 (N6)
+     LUT6:I5->O            1   0.205   0.580  vga0/_n00381_1 (vga0/_n003811)
+     LUT2:I1->O            1   0.205   0.580  vga0/_n0038_SW0 (N8)
+     LUT6:I5->O           11   0.205   0.883  vga0/_n0038 (vga0/_n0038)
+     LUT4:I3->O            1   0.205   0.000  vga0/cnt_y_0_rstpot (vga0/cnt_y_0_rstpot)
+     FD:D                      0.102          vga0/cnt_y_0
+    ----------------------------------------
+    Total                      5.490ns (1.574ns logic, 3.916ns route)
+                                       (28.7% logic, 71.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.018ns (frequency: 166.157MHz)
+  Total number of paths / destination ports: 2704 / 235
+-------------------------------------------------------------------------
+Delay:               6.018ns (Levels of Logic = 6)
+  Source:            g0/font_unit/addr_reg_5_1 (FF)
+  Destination:       g0/rgb_now_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: g0/font_unit/addr_reg_5_1 to g0/rgb_now_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.808  g0/font_unit/addr_reg_5_1 (g0/font_unit/addr_reg_5_1)
+     LUT3:I0->O            2   0.205   0.617  g0/font_unit/Mmux__n24200111 (g0/font_unit/Mmux__n2420011)
+     LUT5:I4->O            6   0.205   0.745  g0/font_unit/_n34891<8>1 (g0/font_unit/_n34891)
+     LUT6:I5->O            1   0.205   0.808  g0/font_unit/Mmux__n1289417 (g0/font_word<20>)
+     LUT6:I3->O            1   0.205   0.580  g0/Mmux_x[10]_font_word[31]_Mux_61_o_8 (g0/Mmux_x[10]_font_word[31]_Mux_49_o_8)
+     LUT6:I5->O            1   0.205   0.684  g0/Mmux_x[10]_font_word[31]_Mux_61_o_3 (g0/Mmux_x[10]_font_word[31]_Mux_49_o_3)
+     LUT6:I4->O            1   0.203   0.000  g0/GND_6_o_PWR_7_o_mux_76_OUT<0>113 (g0/GND_6_o_PWR_7_o_mux_76_OUT<0>1)
+     FDR:D                     0.102          g0/rgb_now_0
+    ----------------------------------------
+    Total                      6.018ns (1.777ns logic, 4.241ns route)
+                                       (29.5% logic, 70.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'b0/m0/clk_1ms'
+  Clock period: 2.536ns (frequency: 394.353MHz)
+  Total number of paths / destination ports: 75 / 27
+-------------------------------------------------------------------------
+Delay:               2.536ns (Levels of Logic = 1)
+  Source:            b4/cnt_3 (FF)
+  Destination:       b4/cnt_0 (FF)
+  Source Clock:      b0/m0/clk_1ms rising
+  Destination Clock: b0/m0/clk_1ms rising
+
+  Data Path: b4/cnt_3 to b4/cnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.447   0.879  b4/cnt_3 (b4/cnt_3)
+     LUT3:I0->O            4   0.205   0.683  b4/cnt[3]_PWR_5_o_LessThan_3_o1 (b4/cnt[3]_PWR_5_o_LessThan_3_o)
+     FDRE:CE                   0.322          b4/cnt_0
+    ----------------------------------------
+    Total                      2.536ns (0.974ns logic, 1.562ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b0/m0/clk_1ms'
+  Total number of paths / destination ports: 15 / 15
+-------------------------------------------------------------------------
+Offset:              3.151ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       b4/cnt_0 (FF)
+  Destination Clock: b0/m0/clk_1ms rising
+
+  Data Path: reset to b4/cnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  reset_IBUF (reset_IBUF)
+     INV:I->O              5   0.206   0.714  b4/button_inv1_INV_0 (b4/button_inv)
+     FDRE:R                    0.430          b4/cnt_0
+    ----------------------------------------
+    Total                      3.151ns (1.858ns logic, 1.293ns route)
+                                       (59.0% logic, 41.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              1.903ns (Levels of Logic = 1)
+  Source:            ps2c (PAD)
+  Destination:       mouse/mouse_unit/ps2_unit/ps2_tx_unit/filter_reg_7 (FF)
+  Destination Clock: clk rising
+
+  Data Path: ps2c to mouse/mouse_unit/ps2_unit/ps2_tx_unit/filter_reg_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           1   1.222   0.579  ps2c_IOBUF (N54)
+     FDC:D                     0.102          mouse/mouse_unit/ps2_unit/ps2_tx_unit/filter_reg_7
+    ----------------------------------------
+    Total                      1.903ns (1.324ns logic, 0.579ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 45 / 17
+-------------------------------------------------------------------------
+Offset:              5.322ns (Levels of Logic = 2)
+  Source:            mouse/mouse_unit/ps2_unit/ps2_tx_unit/state_reg_FSM_FFd3 (FF)
+  Destination:       ps2d (PAD)
+  Source Clock:      clk rising
+
+  Data Path: mouse/mouse_unit/ps2_unit/ps2_tx_unit/state_reg_FSM_FFd3 to ps2d
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             32   0.447   1.520  mouse/mouse_unit/ps2_unit/ps2_tx_unit/state_reg_FSM_FFd3 (mouse/mouse_unit/ps2_unit/ps2_tx_unit/state_reg_FSM_FFd3)
+     LUT4:I1->O            1   0.205   0.579  mouse/mouse_unit/ps2_unit/ps2_tx_unit/Mmux_ps2d_out11 (mouse/mouse_unit/ps2_unit/ps2_tx_unit/ps2d_out)
+     IOBUF:I->IO               2.571          ps2d_IOBUF (ps2d)
+    ----------------------------------------
+    Total                      5.322ns (3.223ns logic, 2.099ns route)
+                                       (60.6% logic, 39.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'vga0/clk0/clk_pixel'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              4.382ns (Levels of Logic = 2)
+  Source:            vga0/in_hs (FF)
+  Destination:       hsync (PAD)
+  Source Clock:      vga0/clk0/clk_pixel rising
+
+  Data Path: vga0/in_hs to hsync
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.579  vga0/in_hs (vga0/in_hs)
+     INV:I->O              1   0.206   0.579  vga0/hsync1_INV_0 (hsync_OBUF)
+     OBUF:I->O                 2.571          hsync_OBUF (hsync)
+    ----------------------------------------
+    Total                      4.382ns (3.224ns logic, 1.158ns route)
+                                       (73.6% logic, 26.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock b0/m0/clk_1ms
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+b0/m0/clk_1ms  |    2.536|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+-------------------+---------+---------+---------+---------+
+                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------+---------+---------+---------+---------+
+b0/m0/clk_1ms      |    3.748|         |         |         |
+clk                |    6.018|         |         |         |
+vga0/clk0/clk_pixel|   10.375|         |         |         |
+-------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock vga0/clk0/clk_pixel
+-------------------+---------+---------+---------+---------+
+                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------+---------+---------+---------+---------+
+vga0/clk0/clk_pixel|    5.490|         |         |         |
+-------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 45.00 secs
+Total CPU time to Xst completion: 45.35 secs
+ 
+--> 
+
+Total memory usage is 338372 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  190 (   0 filtered)
+Number of infos    :   32 (   0 filtered)
+

@@ -1,0 +1,13 @@
+dist_mem_gen_v7_2 "./dist_mem_gen_v7_2/dist_mem_utils.vhd"
+dist_mem_gen_v7_2 "./dist_mem_gen_v7_2/dist_mem_comps.vhd"
+dist_mem_gen_v7_2 "./dist_mem_gen_v7_2/rom/rom.vhd"
+dist_mem_gen_v7_2 "./dist_mem_gen_v7_2/spram/spram.vhd"
+dist_mem_gen_v7_2 "./dist_mem_gen_v7_2/dpram/dpram.vhd"
+dist_mem_gen_v7_2 "./dist_mem_gen_v7_2/sdpram/sdpram.vhd"
+dist_mem_gen_v7_2 "./dist_mem_gen_v7_2/srlram/srl_block.vhd"
+dist_mem_gen_v7_2 "./dist_mem_gen_v7_2/srlram/srlram.vhd"
+dist_mem_gen_v7_2 "./dist_mem_gen_v7_2/dist_mem_gen_v7_2_xst_comp.vhd"
+dist_mem_gen_v7_2 "./dist_mem_gen_v7_2/dist_mem_gen_v7_2_xst.vhd"
+dist_mem_gen_v7_2 "./dist_mem_gen_v7_2/dist_mem_gen_v7_2.vhd"
+work "Figura.vhd"
+nosort

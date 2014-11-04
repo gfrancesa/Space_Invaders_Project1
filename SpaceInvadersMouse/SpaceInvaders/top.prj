@@ -1,0 +1,7 @@
+verilog work "timer_1ms.v"
+verilog work "Figures_ROM.v"
+verilog work "clk_pixel.v"
+verilog work "vga_sync.v"
+verilog work "graphic.v"
+verilog work "debounce.v"
+verilog work "top.v"

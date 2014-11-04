@@ -1,0 +1,17 @@
+set -xsthdpdir "./_cg/_dbg/Figura_xsd"
+run
+-ifn "./_cg/_dbg/Figura.prj"
+-ifmt VHDL
+-ofmt NGC
+-ofn "./_cg/_dbg/Figura.ngc"
+-p xc6vlx75t-3ff484
+-iobuf NO
+-work_lib work
+-ent Figura
+-arch virtex6
+-top Figura
+-bus_delimiter <>
+-lso "./_cg/_dbg/_default.lso"
+-keep_hierarchy NO
+-resource_sharing NO
+-register_duplication NO

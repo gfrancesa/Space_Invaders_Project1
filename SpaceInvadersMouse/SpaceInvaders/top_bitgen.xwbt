@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\luna\Desktop\SpaceInvaders\top.ncd
+OUTFILE=C:\Users\luna\Desktop\SpaceInvaders\top.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\luna\Desktop\SpaceInvaders
+LICENSE=WebPack
+USER_INFO=210929199_0_0_229
