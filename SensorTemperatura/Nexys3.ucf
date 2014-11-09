@@ -1,0 +1,29 @@
+NET "clk"            LOC = "V10" ;
+
+NET "reset_n"          LOC = "T9";   # Bank = 2, Pin name = IO_L25N_2/VS1/A18, Type = DUAL,               Sch name = U-INT0#
+
+
+
+NET "scl"  LOC = "N10" | pullup;
+NET "sda"  LOC = "P11" |pullup;
+
+
+
+NET "rw"  LOC = "T5";
+
+Net "seg<0>" LOC = "T17"; 
+Net "seg<1>" LOC = "N14" ;
+Net "seg<2>" LOC = "T18" ;
+Net "seg<3>" LOC = "L14" ;
+Net "seg<4>" LOC = "M14" ;
+Net "seg<5>" LOC = "U18" ;
+Net "seg<6>" LOC = "U17" ;
+Net "seg<7>" LOC = "M13" ;
+
+Net "an<0>" LOC = "N16" ;
+Net "an<1>" LOC = "N15" ;
+Net "an<2>" LOC = "P18" ;
+Net "an<3>" LOC = "P17" ;
+
+
+

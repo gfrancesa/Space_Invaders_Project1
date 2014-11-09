@@ -1,0 +1,29 @@
+Command line:
+   testnupuedo_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  3465
+
+Sun Nov 09 00:30:55 2014
+
+
+ Elaboration Time: 0.234001 sec
+
+ Current Memory Usage: 682.189 Meg
+
+ Total Signals          : 64
+ Total Nets             : 131
+ Total Signal Drivers   : 42
+ Total Blocks           : 9
+ Total Primitive Blocks : 7
+ Total Processes        : 40
+ Total Traceable Variables  : 65
+ Total Scalar Nets and Variables : 704
+Total Line Count : 250
+
+ Total Simulation Time: 0.280801 sec
+
+ Current Memory Usage: 996.762 Meg
+
+Sun Nov 09 00:31:52 2014
+

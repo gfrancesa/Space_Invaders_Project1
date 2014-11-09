@@ -1,0 +1,42 @@
+NET "clk"      LOC = "V10";
+
+// buttons
+NET "btn1[0]"  LOC = "C4";
+NET "btn1[1]"  LOC = "A8";
+NET "btn2[0]"  LOC = "D9";
+NET "btn2[1]"  LOC = "C9";
+NET "reset"    LOC = "B8";
+#NET "EN"       LOC = "M11";
+#NET "miao[0]"  LOC = "T5";
+#NET "miao[1]"  LOC = "V8";
+
+//Mouse
+NET "ps2d"    LOC = "K14" | pullup;   #Bank = 1, Pin name = IO_L39N_M1ODT,                     Sch name = PIC-SDO1
+NET "ps2c"    LOC = "L13" | pullup;   #Bank = 1, Pin name = IO_L40N_GCLK10_M1A6,               Sch name = PIC-SS1
+//leds
+NET "led<0>"         LOC = "U16" ;   #Bank = 2, Pin name = IO_L2P_CMPCLK,                     Sch name = LD0
+NET "led<1>"         LOC = "V16" ;   #Bank = 2, Pin name = IO_L2N_CMPMOSI,                    Sch name = LD1
+NET "led<2>"         LOC = "U15" ;   #Bank = 2, Pin name = IO_L5P,                            Sch name = LD2
+NET "led<3>"         LOC = "V15" ;   #Bank = 2, Pin name = IO_L5N,                            Sch name = LD3
+NET "led<4>"         LOC = "M11" ;   #Bank = 2, Pin name = IO_L15P,                           Sch name = LD4
+NET "led<5>"         LOC = "N11" ;   #Bank = 2, Pin name = IO_L15N,                           Sch name = LD5
+NET "led<6>"         LOC = "R11" ;   #Bank = 2, Pin name = IO_L16P,                           Sch name = LD6
+NET "led<7>"         LOC = "T11" ;   #Bank = 2, Pin name = IO_L16N_VREF,                      Sch name = LD7
+
+
+
+// vga sync
+NET "hsync"    LOC = "N6";
+NET "vsync"    LOC = "P7";
+
+// Red: 3 bits
+NET "rgb[0]"   LOC = "U7";
+NET "rgb[1]"   LOC = "V7";
+NET "rgb[2]"   LOC = "N7";
+// Green: 3 bits
+NET "rgb[3]"   LOC = "P8";
+NET "rgb[4]"   LOC = "T6";
+NET "rgb[5]"   LOC = "V6";
+// Blue: 2 bits
+NET "rgb[6]"   LOC = "R7";
+NET "rgb[7]"   LOC = "T7";

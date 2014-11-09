@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Johan\Documents\TEC\Taller\I2cVhdlSabado\TopClock.ncd
+OUTFILE=C:\Users\Johan\Documents\TEC\Taller\I2cVhdlSabado\TopClock.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\Johan\Documents\TEC\Taller\I2cVhdlSabado
+LICENSE=WebPack
+USER_INFO=210858245_0_0_555
