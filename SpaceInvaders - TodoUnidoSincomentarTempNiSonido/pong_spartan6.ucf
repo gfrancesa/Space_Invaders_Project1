@@ -1,0 +1,64 @@
+NET "clk"      LOC = "V10";
+
+// buttons
+NET "btn1[0]"  LOC = "A8";
+NET "btn1[1]"  LOC = "D9";
+NET "btn2[0]"  LOC = "C4";
+NET "btn2[1]"  LOC = "C9";
+NET "reset"    LOC = "B8";
+
+//Mouse
+NET "ps2d"    LOC = "K14" | pullup;   #Bank = 1, Pin name = IO_L39N_M1ODT,                     Sch name = PIC-SDO1
+NET "ps2c"    LOC = "L13" | pullup;   #Bank = 1, Pin name = IO_L40N_GCLK10_M1A6,               Sch name = PIC-SS1
+//leds
+NET "led<0>"         LOC = "U16" | pullup;   #Bank = 2, Pin name = IO_L2P_CMPCLK,                     Sch name = LD0
+NET "led<1>"         LOC = "V16" | pullup;   #Bank = 2, Pin name = IO_L2N_CMPMOSI,                    Sch name = LD1
+NET "led<2>"         LOC = "U15" | pullup;   #Bank = 2, Pin name = IO_L5P,                            Sch name = LD2
+NET "led<3>"         LOC = "V15" | pullup;  #Bank = 2, Pin name = IO_L5N,                            Sch name = LD3
+NET "led<4>"         LOC = "M11" | pullup;   #Bank = 2, Pin name = IO_L15P,                           Sch name = LD4
+NET "led<5>"         LOC = "N11" | pullup;   #Bank = 2, Pin name = IO_L15N,                           Sch name = LD5
+NET "led<6>"         LOC = "R11" | pullup;   #Bank = 2, Pin name = IO_L16P,                           Sch name = LD6
+NET "led<7>"         LOC = "T11" | pullup;   #Bank = 2, Pin name = IO_L16N_VREF,                      Sch name = LD7
+//Sonido
+
+Net "JA<0>" LOC = K2 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L38P_M3DQ2, Sch name = JB1
+Net "JA<1>" LOC = K1 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L19N, Sch name = JA2  
+Net "JA<2>" LOC = L4 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L20P, Sch name = JA3
+Net "JA<3>" LOC = L3 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L20N, Sch name = JA4
+//Sensor
+NET "scl"  LOC = "N10" | pullup;
+NET "sda"  LOC = "P11" | pullup;
+
+
+//7Segmentos
+Net "seg<0>" LOC = "T17" | pullup; 
+Net "seg<1>" LOC = "N14" | pullup;
+Net "seg<2>" LOC = "T18" | pullup;
+Net "seg<3>" LOC = "L14" | pullup;
+Net "seg<4>" LOC = "M14" | pullup;
+Net "seg<5>" LOC = "U18" | pullup;
+Net "seg<6>" LOC = "U17" | pullup;
+Net "seg<7>" LOC = "M13" | pullup;
+
+Net "an<0>" LOC = "N16" | pullup;
+Net "an<1>" LOC = "N15" | pullup;
+Net "an<2>" LOC = "P18" | pullup;
+Net "an<3>" LOC = "P17" | pullup;
+#NET "miao[0]"  LOC = "T5";
+#NET "miao[1]"  LOC = "V8";
+
+// vga sync
+NET "hsync"    LOC = "N6" | pullup;
+NET "vsync"    LOC = "P7" | pullup;
+
+// Red: 3 bits
+NET "rgb[0]"   LOC = "U7" | pullup;
+NET "rgb[1]"   LOC = "V7" | pullup;
+NET "rgb[2]"   LOC = "N7" | pullup;
+// Green: 3 bits
+NET "rgb[3]"   LOC = "P8" | pullup;
+NET "rgb[4]"   LOC = "T6" | pullup;
+NET "rgb[5]"   LOC = "V6" | pullup;
+// Blue: 2 bits
+NET "rgb[6]"   LOC = "R7" | pullup;
+NET "rgb[7]"   LOC = "T7" | pullup;
