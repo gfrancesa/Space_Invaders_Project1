@@ -18,9 +18,8 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module Display(CLK,RST,out2,an,In1, In2, In3, In4);
-	input CLK,RST;
-	input [3:0]In1, In2, In3, In4;
+module Display(CLK,RST,P,out2,an);
+	input CLK,RST,P;
 	output wire [7:0]out2;
 	output wire [3:0]an;
 	 
@@ -28,19 +27,16 @@ module Display(CLK,RST,out2,an,In1, In2, In3, In4);
 	wire [3:0]OUT;
 	wire Z;
 	
-/*
-	assign an[0]=1'b0;
-	assign an[1]=1'b0;
-	assign an[2]=1'b0;
-	assign an[3]=1'b0;
-	*/
-	
-	 
-MUX4x1 mux(In1, In2, In3, In4,SEL,OUT, an); 
+   wire [3:0] count1,count2,count3,count4;
+Cuenta puntos(CLK,RST,P,count1,count2,count3,count4);
+
+
+MUX4x1 mux(count4,count3,count2,count1,SEL,OUT, an); 
+
 Deco deco_b(OUT, out2);
 
 Contador conta(CLK,Z,RST,SEL);
-Conta2 conta2(CLK,RST,Z); 
+Conta2 conta2(CLK,RST,Z);
 
 
 endmodule

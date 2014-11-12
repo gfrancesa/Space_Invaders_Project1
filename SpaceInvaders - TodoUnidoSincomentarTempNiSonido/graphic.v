@@ -4,16 +4,26 @@
 		
 		module graphic(
 			 input wire  clk, reset,
+			 input wire [7:0]COLOR_TEMPERATURE,
 			 input wire  [10:0] x, y,
 			 input wire  [1:0]  btn1, btn2,
-			 output wire [7:0]  rgb
+			 output wire [7:0]  rgb,
+			 output wire [1:0] soundOut
 		);
 
 			 // ---------------------------------------------DEFINICION COLORES----------------------------------------------
-			 localparam COLOR_BACK_GROUND = 8'b01001000;   
-			 localparam COLOR_TEMPERATURE = 8'b11011101;			 
+			 localparam COLOR_BACK_GROUND = 8'b01001000;  
+			 //localparam COLOR_TEMPERATURE = 8'b11100000;			 
 			 localparam COLOR_WOUNDED = 8'b00111100;			 		 		 
 			 localparam COLOR_NULL = 8'b00000000;
+			 //amarillo 00101111
+			 //Rojo 10010111  b01001000
+			 // verde herido b00111100;
+			 //morada azul  b11000011
+			 //rojo 01010101
+			 //naranja b01010111
+			 
+			 //
 			
 			reg [10:0] rom_addr;    // Permite identificar cual fila en la ROM
 			wire [31:0] font_word;  // Contenido de la fila en el ROM
@@ -99,6 +109,7 @@
 
 			
 			reg [7:0] rgb_now;
+			reg [1:0] sound_now;
 			
 			 
 			 // Estas son las naves de invasores, del jugador, barreras... elementos GUI que estan el el ROM
@@ -183,8 +194,10 @@
 											begin
 												ENEMIGOS_FILA_3[(bala1_x-ENEMIGOS_FILA_3_X)/11'd32] <= 0;
 												// SUMAR PUNTO POR MUERTE
+												sound_now <= 2'd1;
 											end
 										bala1 <= 1'd0;
+										sound_now <= 2'd0;
 									end 
 									
 									//Este If funciona igual al anterior, pero es CUANDO LA BALA TOCA LOS  EXTREMOS DE LA FILA
@@ -198,8 +211,10 @@
 										else
 											begin
 												ENEMIGOS_FILA_3[((bala1_x+11'd4)-ENEMIGOS_FILA_3_X)/11'd32] <= 0;
+												sound_now <= 2'd1;
 											end
 										bala1 <= 1'd0;
+										sound_now <= 2'd0;
 									end 
 									
 							 end
@@ -221,8 +236,10 @@
 										else
 											begin
 												ENEMIGOS_FILA_2[(bala1_x-ENEMIGOS_FILA_2_X)/11'd32] <= 0;
+												sound_now <= 2'd1;
 											end
 										bala1 <= 1'd0;
+										sound_now <= 2'd0;
 									end 
 					// IF CHOQUE CON PUNTOS EXTREMOs DENTRO DE FILA 2 DE INVASORES: funciona exactamente igual al de la fila 3
 	
@@ -235,8 +252,10 @@
 										else
 											begin
 												ENEMIGOS_FILA_2[((bala1_x+11'd4)-ENEMIGOS_FILA_2_X)/11'd32] <= 0;
+												sound_now <= 2'd1;
 											end
 										bala1 <= 1'd0;
+										sound_now <= 2'd0;
 									end 								
 							 end
 	// ----------------------------------------Choque con PRIMERA Fila de invasores-------------------------------------------
@@ -258,8 +277,10 @@
 										else
 											begin
 												ENEMIGOS_FILA_1[(bala1_x-ENEMIGOS_FILA_1_X)/11'd32] <= 0;
+												sound_now <= 2'd1;
 											end
 										bala1 <= 1'd0;
+										sound_now <= 2'd0;
 									end 
 						// IF CHOQUE CON PUNTOS EXTREMOs DENTRO DE FILA 1 DE INVASORES: funciona exactamente igual al de la fila 3 y 2
 
@@ -272,8 +293,10 @@
 										else
 											begin
 												ENEMIGOS_FILA_1[((bala1_x+11'd4)-ENEMIGOS_FILA_1_X)/11'd32] <= 0;
+												sound_now <= 2'd1;
 											end
 										bala1 <= 1'd0;
+										sound_now <= 2'd0;
 									end 																		
 							 end
 
@@ -596,4 +619,5 @@
 			 end
 			 
 			 assign rgb = rgb_now;
+			 assign soundOut = sound_now;
 		endmodule
