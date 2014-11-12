@@ -10,12 +10,14 @@
 	 output wire [7:0] seg,
 	 output wire [3:0]an,
     inout wire  sda,scl,
+	 //output wire [1:0] soundOut,
     output wire hsync, vsync,
     output wire [7:0] rgb
 );
     wire [10:0] x, y;
 	 wire [1:0] soundOut;
 	 wire [2:0]btnm;
+	 wire undisparo,unomuerto;
     vga_sync vga0(.clk(clk),
         .hsync(hsync), .vsync(vsync),
         .x(x), .y(y));
@@ -39,7 +41,7 @@
 	 
 	 
 //--------------Logico de generacion de Sonidos y Comunicacion I2S-------------------------------------------------------
-	 i2s_tst_top sonido(clk, {reset_out,soundOut[0],btnm[2],btnm[0]|btnm[1]},  JA);
+	 i2s_tst_top sonido(clk, {reset_out,unomuerto,btnm[2],btnm[0]|btnm[1]},  JA);
 	 
 //------------------Logica del Sensor de Temperatura------------------------------------------------------------------------- 
 	 TopClock sensorTemperatura(
@@ -53,6 +55,7 @@
 	 //btn[0]-->disparo btn[1]-->movio btn[2]--->destruyo
 	 
 //-------------------Puntajes------------------------------------------------------------------------------------------
-	Display(clk,reset_out,soundOut[0],seg,an);
-	 
+	Display(clk,reset_out,unomuerto | undisparo,seg,an);
+	FSM_Puntos resiviodisparo(clk,reset_out,soundOut[1],undisparo);
+	FSM_Puntos murioenemigo(clk,reset_out,soundOut[0],unomuerto);
 endmodule

@@ -154,6 +154,7 @@
 								bala1_x<=JUGADOR_X+11'd14;
 								bala1_y<=JUGADOR_Y-11'd8;
 								bala1<=1'd1;
+								sound_now <= 2'b00;
 							end 
 						
 
@@ -187,6 +188,7 @@
 											begin
 												ENEMIGOS_FILA_3_DISPAROS[(bala1_x-ENEMIGOS_FILA_3_X)/11'd32] <= 0;
 												// AQUI SUMAR PUNTO POR DISPARO
+												sound_now <= 2'b10;
 											end
 										// En este else se entra cuando al invasor YA se se le habia disparado con anterioridad.
 										//Por lo que este muere, entonces se pone su bit correspondiente en 0.
@@ -194,10 +196,10 @@
 											begin
 												ENEMIGOS_FILA_3[(bala1_x-ENEMIGOS_FILA_3_X)/11'd32] <= 0;
 												// SUMAR PUNTO POR MUERTE
-												sound_now <= 2'd1;
+												sound_now <= 2'b11;
 											end
 										bala1 <= 1'd0;
-										sound_now <= 2'd0;
+										//sound_now <= 2'd0;
 									end 
 									
 									//Este If funciona igual al anterior, pero es CUANDO LA BALA TOCA LOS  EXTREMOS DE LA FILA
@@ -207,16 +209,16 @@
 										if(ENEMIGOS_FILA_3_DISPAROS[((bala1_x+11'd4)-ENEMIGOS_FILA_3_X)/11'd32])
 											begin
 												ENEMIGOS_FILA_3_DISPAROS[((bala1_x+11'd4)-ENEMIGOS_FILA_3_X)/11'd32] <= 0;
+												sound_now <= 2'b10;
 											end
 										else
 											begin
 												ENEMIGOS_FILA_3[((bala1_x+11'd4)-ENEMIGOS_FILA_3_X)/11'd32] <= 0;
-												sound_now <= 2'd1;
+												sound_now <= 2'b11;
 											end
 										bala1 <= 1'd0;
-										sound_now <= 2'd0;
+										//sound_now <= 2'd0;
 									end 
-									
 							 end
 // -----------------------------------------Choque con SEGUNDA Fila de invasores-------------------------------------------
 							// En este if se entra cuando la bala ha tocado algun elemento de la fila 2 de invasores
@@ -232,14 +234,15 @@
 										if(ENEMIGOS_FILA_2_DISPAROS[(bala1_x-ENEMIGOS_FILA_2_X)/11'd32])
 											begin
 												ENEMIGOS_FILA_2_DISPAROS[(bala1_x-ENEMIGOS_FILA_2_X)/11'd32] <= 0;
+												sound_now <= 2'b10;
 											end
 										else
 											begin
 												ENEMIGOS_FILA_2[(bala1_x-ENEMIGOS_FILA_2_X)/11'd32] <= 0;
-												sound_now <= 2'd1;
+												sound_now <= 2'b11;
 											end
 										bala1 <= 1'd0;
-										sound_now <= 2'd0;
+										//sound_now <= 2'd0;
 									end 
 					// IF CHOQUE CON PUNTOS EXTREMOs DENTRO DE FILA 2 DE INVASORES: funciona exactamente igual al de la fila 3
 	
@@ -248,15 +251,17 @@
 										if(ENEMIGOS_FILA_2_DISPAROS[((bala1_x+11'd4)-ENEMIGOS_FILA_2_X)/11'd32])
 											begin
 												ENEMIGOS_FILA_2_DISPAROS[((bala1_x+11'd4)-ENEMIGOS_FILA_2_X)/11'd32] <= 0;
+												sound_now <= 2'b10;
 											end
 										else
 											begin
 												ENEMIGOS_FILA_2[((bala1_x+11'd4)-ENEMIGOS_FILA_2_X)/11'd32] <= 0;
-												sound_now <= 2'd1;
+												sound_now <= 2'b11;
 											end
 										bala1 <= 1'd0;
-										sound_now <= 2'd0;
-									end 								
+										//sound_now <= 2'd0;
+									end 	
+									//sound_now <= 2'd0;
 							 end
 	// ----------------------------------------Choque con PRIMERA Fila de invasores-------------------------------------------
 							// En este if se entra cuando la bala ha tocado algun elemento de la fila 1 de invasores
@@ -273,14 +278,15 @@
 										if(ENEMIGOS_FILA_1_DISPAROS[(bala1_x-ENEMIGOS_FILA_1_X)/11'd32])
 											begin
 												ENEMIGOS_FILA_1_DISPAROS[(bala1_x-ENEMIGOS_FILA_1_X)/11'd32] <= 0;
+												sound_now <= 2'b10;
 											end
 										else
 											begin
 												ENEMIGOS_FILA_1[(bala1_x-ENEMIGOS_FILA_1_X)/11'd32] <= 0;
-												sound_now <= 2'd1;
+												sound_now <= 2'b11;
 											end
 										bala1 <= 1'd0;
-										sound_now <= 2'd0;
+										//sound_now <= 2'd0;
 									end 
 						// IF CHOQUE CON PUNTOS EXTREMOs DENTRO DE FILA 1 DE INVASORES: funciona exactamente igual al de la fila 3 y 2
 
@@ -289,15 +295,17 @@
 										if(ENEMIGOS_FILA_1_DISPAROS[((bala1_x+11'd4)-ENEMIGOS_FILA_1_X)/11'd32])
 											begin
 												ENEMIGOS_FILA_1_DISPAROS[((bala1_x+11'd4)-ENEMIGOS_FILA_1_X)/11'd32] <= 0;
+												sound_now <= 2'b10;
 											end
 										else
 											begin
 												ENEMIGOS_FILA_1[((bala1_x+11'd4)-ENEMIGOS_FILA_1_X)/11'd32] <= 0;
-												sound_now <= 2'd1;
+												sound_now <= 2'b11;
 											end
 										bala1 <= 1'd0;
-										sound_now <= 2'd0;
-									end 																		
+										//sound_now <= 2'd0;
+									end 
+										//sound_now <= 2'd0;
 							 end
 
 	// ------------------------------------------------Choque con TERCERA BARRERA-------------------------------------------
