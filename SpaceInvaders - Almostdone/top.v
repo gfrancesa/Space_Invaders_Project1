@@ -33,10 +33,11 @@
     graphic g0(.clk(clk), .reset(reset_out), .COLOR_TEMPERATURE(ColoresTemperatura),
         .x(x), .y(y), .rgb(rgb),
         .btn1(btnm[1:0]| btn1_out), .btn2(btnm[2:1] | btn2_out),  .soundOut(soundOut));
-		  //.btn1(btnm[1:0]| btn1_out), .btn2(btnm[2:1] | btn2_out));
-		  //.btn1(btn1_out), .btn2(btn2_out));
-		  //8'b11100000
+		  
+//--------------------------Modulo de control utilizando el mouse--------------------------------------------
 	 mouse_led mouse(.clk(clk), .reset(reset_out),.ps2d(ps2d), .ps2c(ps2c),.led(led),.btnm(btnm));
+	 
+	 
 //--------------Logico de generacion de Sonidos y Comunicacion I2S-------------------------------------------------------
 	 i2s_tst_top sonido(clk, {reset_out,soundOut[0],btnm[2],btnm[0]|btnm[1]},  JA);
 	 
@@ -53,5 +54,5 @@
 	 
 //-------------------Puntajes------------------------------------------------------------------------------------------
 	Display(clk,reset_out,soundOut[0],seg,an);
-	 //
+	 
 endmodule
