@@ -39,7 +39,7 @@ module Machine(
 	//Red de estado futuro
 	always @ (PRE or disparo or destruyo or movio or conto)
 		case (PRE)//En cada caso se evaluan las condiciones para hacer un salto a otro estado.
-			T0: if (disparo)
+			T0: if (disparo)//Se espera a que se de algun evento
 					FUT=T1;
 				 else if (destruyo) 
 				   FUT=T4;
@@ -54,29 +54,29 @@ module Machine(
 					FUT=T7;
 					
 			T3: 
-					if (conto)
+					if (conto)//Se espera a que pase el tiempo que tiene que sonar.
 					FUT=T0;
 				 else 
 					FUT=T3;
 					
 			T4:  
-					if (conto)
+					if (conto)//Se espera a que pase el tiempo que prepara el sonido de destruyo
 					FUT=T5;
 				 else 
 					FUT=T4;
 			
 			T5:  
-					if (conto)
+					if (conto)//Se espera a que pase el tiempo que prepara el sonido de destruyo
 					FUT=T6;
 				 else 
 					FUT=T5;
 					
-			T6: if (conto)
+			T6: if (conto)//Se espera a que pase el tiempo que tiene que sonar
 					FUT=T7;
 				 else 
 					FUT=T6;
 			
-			T7: if (conto)
+			T7: if (conto)//Se espera a que pase el tiempo que tiene que sonar
 					FUT=T0;
 				 else 
 					FUT=T7;
@@ -86,9 +86,9 @@ module Machine(
 	//Asignación de salidas
 	
 	always @ (PRE)//Al momento de estar en un estado, se ponen ciertas salidas en "1" y las demas en "0".
-		case (PRE)//H,Led,RestCont, Cero, SContAL, SContTime, EndCTime,Result, OneSeg, Nine
+		case (PRE)
 			T0: begin 
-					reset_sonido=1;
+					reset_sonido=1;//Espera los eventos, mantiene todo en reset.
 					fre_up=0;
 					fre_down=0;
 					cuente=0;
@@ -103,35 +103,35 @@ module Machine(
 					suene=0;
 					
 				end
-			T2: begin //H,Led,RestCont, Cero, SContAL, SContTime, EndCTime,Result, OneSeg, Nine
+			T2: begin 
 					reset_sonido=0;
 					fre_up=1;
 					fre_down=0;
 					cuente=0;
 					suene=0;
 				end
-			T3: begin  //H,Led,RestCont, Cero, SContAL, SContTime, EndCTime,Result, OneSeg, Nine
+			T3: begin  
 					reset_sonido=0;
 					fre_up=0;
 					fre_down=1;
 					cuente=1;
 					suene=1;
 				end
-			T4: begin  //H,Led,RestCont, Cero, SContAL, SContTime, EndCTime,Result, OneSeg, Nine
+			T4: begin  
 					reset_sonido=0;
 					fre_up=0;
 					fre_down=1;
 					cuente=1;
 					suene=0;
 				end
-			T5: begin  //H,Led,RestCont, Cero, SContAL, SContTime, EndCTime,Result, OneSeg, Nine
+			T5: begin  
 					reset_sonido=0;
 					fre_up=0;
 					fre_down=1;
 					cuente=1;
 					suene=0;
 				end
-			T6: begin  //H,Led,RestCont, Cero, SContAL, SContTime, EndCTime,Result, OneSeg, Nine
+			T6: begin  
 					reset_sonido=0;
 					fre_up=0;
 					fre_down=1;

@@ -40,33 +40,33 @@ module FSM_Logic(
 	//Red de estado futuro
 	always @ (PRE or Z or busy)
 		case (PRE)//En cada caso se evaluan las condiciones para hacer un salto a otro estado.
-			T0: if (Z)
+			T0: if (Z)//La bandera Z indica que se debe hacer una lectura
 					FUT=T1;
 				 else 
 					FUT=T0;
 					
-			T1: if (busy)
+			T1: if (busy)//Se espera hasta que el modulo de comuniacion este ocupado
 					FUT=T2;
 				else  
 					FUT=T1;
 					
-			T2: if (~busy)
+			T2: if (~busy)//Cuando deja de estar ocupado paso a recuperar los datos MSB
 					FUT=T3;
 				 else 
 					FUT=T2;	
-			T3: if (busy)//tomo MSB
-					FUT=T4;//-------------cambiar T4
+			T3: if (busy)//tomo MSB y espero a que vuelva a estar ocupado el I"C
+					FUT=T4;
 				else 
 					FUT=T3;
-			T4: FUT=T5;
+			T4: FUT=T5;//Dejo el enable activado unos clock's mas.
 			T5: FUT=T6;
 			T6: FUT=T7;
 			T7: FUT=T11;
-			T8: if (busy)
+			T8: if (busy)//Se quita el enable y espero a que deje de estar ocupado para recuperar datos LSB
 					FUT=T8;
 				else 
 					FUT=T9;
-			T9: FUT=T0;//tomo LSB
+			T9: FUT=T0;//Recupero datos LSB y paso a estar en modo de espera.
 			T10: FUT=T0;
 			T11: FUT=T12;
 			T12: FUT=T13;
@@ -80,8 +80,8 @@ module FSM_Logic(
 	//Asignación de salidas
 	
 	always @ (PRE)//Al momento de estar en un estado, se ponen ciertas salidas en "1" y las demas en "0".
-		case (PRE)//H,Led,RestCont, Cero, SContAL, SContTime, EndCTime,Result, OneSeg, Nine
-			T0: begin
+		case (PRE)
+			T0: begin//En espera.
 					P=1'b0;
 					MSB=MSB;
 					LSB=LSB;
@@ -101,7 +101,7 @@ module FSM_Logic(
 					MSB=data_rd;
 					LSB=LSB;
 				 end
-			//P=1'b0;//tomar Msb --------------cambiar1'b1
+			//Se toman los MSB --------------
 			
 			T4: begin
 					P=1'b1;
@@ -133,7 +133,7 @@ module FSM_Logic(
 					MSB=MSB;
 					LSB=data_rd;
 				 end
-				 //P=1'b0;//tomar Lsb
+				 //se toman LSB
 			T10: begin
 					P=1'b0;
 					MSB=MSB;

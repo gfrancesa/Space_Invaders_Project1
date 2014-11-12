@@ -42,12 +42,17 @@ module i2s_tst_top(clk, btn,  JA);
 			.lrck(JA[1]),
 			.sdout(JA[3])
 		);
-	//.btn(btn[2:0]),|btn[2:0]
-		//.btn({suene,fre_down,fre_up}),
+	//Se resiven las señales de que hubo movimiento y disparo
+	//Solo se toma en cuenta 1 ciclo aunque dure mas tiempo activa
+	// asi para cada señal
 	FSM_Puntos solounavesDisp(clk2,btn[3],btn[0],disparo);	
 	FSM_Puntos solounavesMov(clk2,btn[3],btn[1],movio);
    FSM_Puntos solounavesDest(clk2,btn[3],btn[2],destruyo);	
+	
+	//Cada sonido dura segun lo establese el modulo tiemposonidos
 	TiempoSonando tiemposonidos(clk2, btn[3]|reset_sonido, cuente ,conto);
+	
+	//La logica de sonidos espera cada evento y genera un sonido para cada uno de ellos
 	Machine logicaSonidos(clk2,btn[3],disparo,destruyo,movio,conto,
 					reset_sonido,fre_up,fre_down,cuente,suene);
 endmodule

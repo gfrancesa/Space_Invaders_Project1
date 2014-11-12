@@ -16,11 +16,6 @@ module mouse_led
    wire m_done_tick;
 	
 	
-	//--------------------Display-------------------------------
-	
-	
-	
-	//-----------------------------------------------------------
    mouse mouse_unit
       (.clk(clk), .reset(reset), .ps2d(ps2d), .ps2c(ps2c),
        .xm(xm), .btnm(btnm),
@@ -33,7 +28,7 @@ module mouse_led
          p_reg <= p_next;
 
    assign p_next = (~m_done_tick) ? p_reg  : // no activity
-                   (btnm[0])      ? 10'b0  : // left button
+                   (btnm[0])      ? 10'b0  : // left button //btnm[2] botton central
                    (btnm[1])     ? 10'h3ff : // right button
                    p_reg + {xm[8], xm};      // x movement
 //   assign izq = (btnm == 3'b001);

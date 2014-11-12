@@ -34,13 +34,18 @@ module TopClock(
 	always @(posedge clk)
 
 		clk2 <= ~clk2;
-		
+		//Particion del clock en 50000hertz
+//----------FSM_Logic controla en modulo que establece comunicacion con el sensor de temperatura----------
 FSM_Logic inteligencia(clk2,~reset_n,data_rd,unena,busy,enaI2c,MSB,LSB);
 
-ContaActualiza(clk2,~reset_n,unena);
 
-//FSM_Puntos unavez(clk2,~reset_n,ena2,unena);
-//SM_Puntos(        CLK,RST,data_rd,Z,     busy,P,   MSB,LSB);
+//----------Se actualiza el dato leido desde el sensor casa Cuarto de Segundo ----------------------------
+ContaActualiza periododelectura(clk2,~reset_n,unena);
+
+
+//--------------Capa de comuniacion con el sensor mediante I2C--------------------------------------------
+//rw--> 1 para leer.
+//address 7'b1001011 segun lo espesificado por el fabricante del sensor
 i2c_master master(
     .clk(clk2),
     .reset_n(reset_n),
@@ -53,8 +58,7 @@ i2c_master master(
     .ack_error(),
     .sda(sda) ,
     .scl(scl) );
-	 
+//Muestreo de los datos leidos en displays (QUITAR)	 
 Display(clk2,~reset_n,seg,an,MSB[7:4], MSB[3:0], LSB[7:4], LSB[3:0]);
-//data_rd[7:4], data_rd[3:0], data_rd[7:4], data_rd[3:0]);
 
 endmodule
