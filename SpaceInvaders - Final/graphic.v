@@ -140,6 +140,43 @@
 				  if (clk_frame && loose_flag == 11'd0) 
 				  begin
 	// -----------------------------------LIMITAR QUE LA BOLA NO SUBA MAS QUE LA POSICION SUPERIOR 0----------------
+						if(reset)
+						begin
+							   previous_y <= 11'd0;
+								izquierda_derecha <= 11'd0;
+								movimiento_x <= 11'd1;
+								movimiento_y <= 11'd1;
+								cambio_velocidad <= 11'b1;
+								
+								
+								ENEMIGOS_FILA_1 <= 11'b11111111111;
+								ENEMIGOS_FILA_2 <= 11'b11111111111;
+								ENEMIGOS_FILA_3 <= 11'b11111111111;
+								ENEMIGOS_FILA_1_DISPAROS <= 11'b11111111111;
+								ENEMIGOS_FILA_2_DISPAROS <= 11'b11111111111;
+								ENEMIGOS_FILA_3_DISPAROS <= 11'b11111111111;
+			
+			// ----------------------------------POSICION DE LAS FILAS DE INVASORES--------------------------------------------
+								ENEMIGOS_FILA_1_X   <= 11'd128;
+								ENEMIGOS_FILA_1_Y   <= 11'd64;
+								ENEMIGOS_FILA_2_X   <= 11'd128;
+								ENEMIGOS_FILA_2_Y   <= 11'd96;
+								ENEMIGOS_FILA_3_X   <= 11'd128;
+								ENEMIGOS_FILA_3_Y   <= 11'd128;
+			// --------------------------------------- DEFINICION DE POSICIONES DE BARRERAS -----------------------------------
+			
+								BARRERA_1_X   <= 11'd64;
+								BARRERA_1_Y   <= 11'd320;
+								BARRERA_2_X   <= 11'd256;
+								BARRERA_2_Y   <= 11'd320;
+								BARRERA_3_X   <= 11'd448;
+								BARRERA_3_Y   <= 11'd320;
+								BARRERA_FILA_1 <= 6'b111111;
+								BARRERA_FILA_2 <= 6'b111111;
+								BARRERA_FILA_3 <= 6'b111111;
+								
+
+						end
 						if (btn1[0] && JUGADOR_X > JUGADOR_V) 
 									JUGADOR_X <= JUGADOR_X - JUGADOR_V;
 									
@@ -149,13 +186,13 @@
 						if(btn2[1])
 						begin
 						
-							if(bala1==1'd0)
-							begin
+//							if(bala1==1'd0)
+//							begin
 								bala1_x<=JUGADOR_X+11'd14;
 								bala1_y<=JUGADOR_Y-11'd8;
 								bala1<=1'd1;
 								sound_now <= 2'b00;
-							end 
+							//end 
 						
 
 						end

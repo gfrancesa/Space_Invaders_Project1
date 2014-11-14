@@ -22,7 +22,7 @@
         .hsync(hsync), .vsync(vsync),
         .x(x), .y(y));
 
-    wire reset_out;
+    wire reset_out,Senal_sing,syn_CLK;
     wire [1:0] btn1_out, btn2_out;
 	 wire [7:0]TemperaturaMSB,ColoresTemperatura;
     debounce b0(clk, btn1[0], btn1_out[0]);
@@ -32,12 +32,12 @@
     debounce b4(clk, reset, reset_out);
 
 //-------------Logica del juego VGA---------------------------------------------------------------------------------
-    graphic g0(.clk(clk), .reset(reset_out), .COLOR_TEMPERATURE(ColoresTemperatura),
+    graphic g0(.clk(clk), .reset(reset_out|syn_CLK), .COLOR_TEMPERATURE(ColoresTemperatura),
         .x(x), .y(y), .rgb(rgb),
         .btn1(btnm[1:0]| btn1_out), .btn2(btnm[2:1] | btn2_out),  .soundOut(soundOut));
 		  
 //--------------------------Modulo de control utilizando el mouse--------------------------------------------
-	 mouse_led mouse(.clk(clk), .reset(reset_out),.ps2d(ps2d), .ps2c(ps2c),.led(led),.btnm(btnm));
+	 mouse_led mouse(.clk(clk), .reset(reset),.ps2d(ps2d), .ps2c(ps2c),.led(led),.btnm(btnm));
 	 
 	 
 //--------------Logico de generacion de Sonidos y Comunicacion I2S-------------------------------------------------------
@@ -58,4 +58,10 @@
 	Display(clk,reset_out,unomuerto | undisparo,seg,an);
 	FSM_Puntos resiviodisparo(clk,reset_out,soundOut[1],undisparo);
 	FSM_Puntos murioenemigo(clk,reset_out,soundOut[0],unomuerto);
+	
+	
+	
+	Inicio_FSM Inicio(reset_out,btn1_out[1]|btnm[1]|btnm[0],1'b0,Senal_sing);
+	 
+	MUX_CLK paraInicio(1'b0,1'b1,Senal_sing,syn_CLK); 
 endmodule
