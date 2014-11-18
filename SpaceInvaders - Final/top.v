@@ -61,7 +61,7 @@
 	
 	
 	
-	Inicio_FSM Inicio(reset_out,btn1_out[1]|btnm[1]|btnm[0],1'b0,Senal_sing);
+	Inicio_FSM Inicio(clk,reset_out,btn1_out[1]|btnm[1]|btnm[0],1'b0,Senal_sing);
 	 
-	MUX_CLK paraInicio(1'b0,1'b1,Senal_sing,syn_CLK); 
+	MUX_CLK paraInicio(1'b1,1'b0,Senal_sing,syn_CLK); 
 endmodule
